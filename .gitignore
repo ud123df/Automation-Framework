@@ -1,0 +1,10 @@
+node_modules/
+shopqa.sqlite
+shopqa.sqlite-shm
+shopqa.sqlite-wal
+sessions.sqlite
+sessions.sqlite-shm
+sessions.sqlite-wal
+playwright-report/
+test-results/
+.env

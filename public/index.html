@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f5f3ee" />
+  <meta name="description" content="ShopQA — a premium demo store built for end-to-end quality engineering practice." />
+  <title>ShopQA — Objects for Everyday Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="announcement"><span>COMPLIMENTARY SHIPPING ON ORDERS OVER ₹1,500</span><span class="announcement-right">Thoughtfully chosen. Made to last.</span></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="ShopQA home"><span class="brand-mark">s<span>.</span></span><span class="brand-word">shopqa</span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="#shop" class="nav-link active">Shop</a><a href="#shop" class="nav-link" data-category-link="Living">Living</a><a href="#shop" class="nav-link" data-category-link="Tech">Technology</a><a href="#shop" class="nav-link" data-category-link="Wear">Wear</a></nav>
+    <div class="header-actions">
+      <button class="icon-button search-toggle" id="searchToggle" aria-label="Search products" title="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
+      <button class="account-button" id="accountButton"><span class="account-dot"></span><span id="accountLabel">Account</span></button>
+      <button class="icon-button cart-button" id="cartButton" aria-label="Open shopping bag" data-testid="open-cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l1 12h-15l1-12Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg><span class="cart-count" id="cartCount">0</span></button>
+      <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation"><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="search-bar" id="searchBar" hidden><label for="searchInput">Find something good</label><input id="searchInput" type="search" placeholder="Try headphones, lighting, everyday…" autocomplete="off" data-testid="product-search" /><button id="clearSearch" class="text-button">Clear</button></div>
+
+  <main id="appMain">
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> THE EVERYDAY EDIT · VOL. 04</div>
+        <h1>Good things.<br/><em>Better living.</em></h1>
+        <p class="hero-description">Considered essentials for the spaces you make, the places you go, and the moments in between.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#shop">Explore the collection <span>↗</span></a><span class="hero-note"><span class="note-star">✳</span> Made for real life</span></div>
+        <div class="hero-foot"><span>01 / EVERYDAY OBJECTS</span><span>DESIGNED TO STAY</span></div>
+      </div>
+      <div class="hero-art" aria-label="Curated everyday objects">
+        <div class="hero-image hero-image-main"><img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=1100&q=90" alt="Minimal ceramic objects on a warm studio table" /></div>
+        <div class="hero-image hero-image-small"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=650&q=85" alt="Premium wireless headphones" /></div>
+        <div class="hero-stamp"><span>THE</span><strong>GOOD<br/>STUFF</strong><span>EST. 2024</span></div>
+        <div class="hero-caption">A little more intention.<br/>A lot more everyday.</div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Store benefits"><div><span class="trust-icon">✳</span><span>Considered design</span></div><div><span class="trust-icon">↗</span><span>Easy, secure checkout</span></div><div><span class="trust-icon">◇</span><span>30-day returns</span></div><div><span class="trust-icon">✦</span><span>Small details. Big difference.</span></div></section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE COLLECTION</div><h2>Objects with <em>purpose.</em></h2></div><p>Less noise. Better choices.<br/>Find your next everyday favourite.</p></div>
+      <div class="shop-toolbar"><div class="category-list" id="categoryList" role="group" aria-label="Filter by category"><button class="category-chip selected" data-category="All">All objects <span class="chip-count" id="allCount">08</span></button><button class="category-chip" data-category="Tech">Technology</button><button class="category-chip" data-category="Living">Living</button><button class="category-chip" data-category="Carry">Carry</button><button class="category-chip" data-category="Wear">Wear</button><button class="category-chip" data-category="Audio">Audio</button></div><label class="sort-control"><span>Sort by</span><select id="sortSelect" aria-label="Sort products"><option value="featured">Featured</option><option value="rating">Top rated</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option></select></label></div>
+      <div class="results-line"><span id="resultsCount">A few good things, picked for you.</span><span class="results-side">DESIGNED FOR EVERYDAY <span>✳</span></span></div>
+      <div class="product-grid" id="productGrid" data-testid="product-grid"><div class="loading-state">Finding the good stuff<span>…</span></div></div>
+    </section>
+
+    <section class="editorial-banner"><div class="editorial-image"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1200&q=85" alt="Warm, considered home interior" /></div><div class="editorial-copy"><div class="eyebrow"><span class="eyebrow-line"></span> A BETTER KIND OF BUY</div><h2>Buy less.<br/><em>Love it longer.</em></h2><p>We believe the things around us should earn their place. Useful, considered, and made to be part of your everyday story.</p><a href="#shop" class="editorial-link">Shop our point of view <span>↗</span></a><div class="editorial-index">THE SHOPQA PRINCIPLE — 001</div></div></section>
+
+    <section class="newsletter"><div class="newsletter-mark">s<span>.</span></div><div class="newsletter-copy"><div class="eyebrow">A NOTE FROM US</div><h2>Good things, <em>occasionally.</em></h2><p>New arrivals, considered picks, and notes on living well. Never noise.</p></div><form class="newsletter-form" id="newsletterForm"><label for="newsletterEmail" class="sr-only">Email address</label><input id="newsletterEmail" type="email" placeholder="Your email address" required /><button type="submit" aria-label="Subscribe to newsletter">Join us <span>↗</span></button><small id="newsletterMessage">By subscribing, you agree to receive occasional updates.</small></form></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">s<span>.</span></span><span class="brand-word">shopqa</span></a><span class="footer-tagline">EVERYDAY OBJECTS, THOUGHTFULLY CHOSEN.</span><div class="footer-links"><a href="#shop">Shop all</a><button id="ordersLink">Your orders</button><a href="/api/health" target="_blank" rel="noreferrer">System status ↗</a></div><span class="footer-copy">© 2026 SHOPQA STUDIO</span></footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="side-drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true"><div class="drawer-head"><div><span class="eyebrow">YOUR EDIT</span><h2>Your bag <span id="drawerCount">(0)</span></h2></div><button class="close-button" data-close aria-label="Close shopping bag">×</button></div><div class="drawer-body" id="cartItems"><div class="empty-state"><span class="empty-symbol">◇</span><h3>A little room for good things.</h3><p>Your bag is waiting for something lovely.</p><button class="button button-dark" id="continueShopping">Explore the collection</button></div></div><div class="drawer-foot" id="cartFooter" hidden><div class="shipping-progress"><span id="shippingMessage">You're close to complimentary shipping.</span><div class="progress-track"><span id="shippingProgress"></span></div></div><div class="subtotal-row"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div><p class="drawer-note">Shipping and taxes calculated at checkout.</p><button class="button button-dark button-wide" id="checkoutButton">Continue to checkout <span>↗</span></button><button class="text-button continue-link" id="continueShopping2">Continue shopping</button></div></aside>
+
+  <section class="modal" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle" hidden><button class="close-button modal-close" data-close aria-label="Close">×</button><div class="modal-brand">s<span>.</span></div><div class="eyebrow" id="authEyebrow">WELCOME BACK</div><h2 id="authTitle">Good to see you.</h2><p class="modal-intro" id="authIntro">Sign in to pick up where you left off.</p><div class="auth-tabs"><button class="auth-tab active" data-auth-mode="login">Sign in</button><button class="auth-tab" data-auth-mode="register">Create account</button></div><form id="authForm" novalidate><div class="form-field" id="nameField" hidden><label for="authName">Full name</label><input id="authName" name="name" autocomplete="name" placeholder="How should we call you?" minlength="2" /></div><div class="form-field"><label for="authEmail">Email address</label><input id="authEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required data-testid="auth-email" /></div><div class="form-field"><div class="field-label-row"><label for="authPassword">Password</label><span>8+ characters</span></div><input id="authPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required data-testid="auth-password" /></div><p class="form-error" id="authError" role="alert"></p><button class="button button-dark button-wide" type="submit" id="authSubmit">Sign in <span>↗</span></button></form><div class="demo-credentials"><span class="demo-dot"></span><span>QA demo account</span><button type="button" id="fillDemo">Use demo login</button></div><p class="modal-legal">By continuing, you agree to our Terms of Service and Privacy Policy.</p></section>
+
+  <section class="modal product-modal" id="productModal" role="dialog" aria-modal="true" aria-label="Product details" hidden><button class="close-button modal-close" data-close aria-label="Close product details">×</button><div id="productDetail"></div></section>
+
+  <section class="page-panel" id="checkoutPage" hidden><div class="page-top"><button class="back-link" id="backToShop">← Back to shopping</button><span class="eyebrow">A FEW MORE DETAILS</span></div><div class="checkout-layout"><div class="checkout-main"><div class="eyebrow">STEP 01 / DELIVERY</div><h1>Make it <em>yours.</em></h1><p class="checkout-intro">Where should we send your good things?</p><form id="checkoutForm" novalidate><div class="checkout-section"><div class="checkout-section-title"><span>01</span><h3>Contact details</h3></div><div class="form-grid"><div class="form-field full"><label for="shippingName">Full name *</label><input id="shippingName" name="shippingName" required autocomplete="name" placeholder="Full name" /></div><div class="form-field full"><label for="shippingEmail">Email address *</label><input id="shippingEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com" /></div></div></div><div class="checkout-section"><div class="checkout-section-title"><span>02</span><h3>Delivery address</h3></div><div class="form-grid"><div class="form-field full"><label for="shippingAddress">Street address *</label><input id="shippingAddress" name="address" required autocomplete="street-address" placeholder="House number and street" /></div><div class="form-field"><label for="shippingCity">City *</label><input id="shippingCity" name="city" required autocomplete="address-level2" placeholder="City" /></div><div class="form-field"><label for="shippingPostal">PIN / Postal code *</label><input id="shippingPostal" name="postalCode" required inputmode="numeric" autocomplete="postal-code" placeholder="e.g. 177001" /></div></div></div><div class="checkout-section"><div class="checkout-section-title"><span>03</span><h3>Payment method</h3></div><div class="payment-options"><label class="payment-option selected"><input type="radio" name="paymentMethod" value="upi" checked /><span class="payment-icon">⌁</span><span><strong>UPI</strong><small>Simulated secure payment</small></span><span class="payment-radio"></span></label><label class="payment-option"><input type="radio" name="paymentMethod" value="card" /><span class="payment-icon">▤</span><span><strong>Credit / debit card</strong><small>Demo only — no real charge</small></span><span class="payment-radio"></span></label><label class="payment-option"><input type="radio" name="paymentMethod" value="cod" /><span class="payment-icon">↗</span><span><strong>Cash on delivery</strong><small>Pay when your order arrives</small></span><span class="payment-radio"></span></label></div></div><p class="form-error" id="checkoutError" role="alert"></p><button class="button button-dark button-wide place-order-button" type="submit">Place demo order <span>↗</span></button><p class="secure-note">◇ &nbsp; Test environment only. No real payments are processed.</p></form></div><aside class="order-summary"><div class="eyebrow">YOUR ORDER</div><h2>A good choice.</h2><div id="checkoutItems"></div><div class="summary-totals" id="checkoutTotals"></div><div class="summary-assurance"><span>✳</span><p>Thoughtfully chosen, carefully packed, on its way to you.</p></div></aside></div></section>
+
+  <section class="page-panel account-page" id="ordersPage" hidden><div class="page-top"><button class="back-link" id="ordersBack">← Back to the collection</button><span class="eyebrow">YOUR SHOPQA</span></div><div class="orders-heading"><div class="eyebrow">A LITTLE HISTORY</div><h1>Your <em>orders.</em></h1><p>Everything you've chosen, all in one place.</p></div><div id="ordersContent"><div class="loading-state">Gathering your orders…</div></div></section>
+
+  <section class="success-screen" id="successPage" hidden><div class="success-icon">✓</div><div class="eyebrow">CONSIDER IT DONE</div><h1>Good things are <em>on their way.</em></h1><p>Your demo order has been placed. No payment was taken.</p><div class="success-order-number" id="successOrderNumber"></div><div class="success-actions"><button class="button button-dark" id="viewOrdersButton">View your orders <span>↗</span></button><button class="button button-light" id="successContinue">Keep exploring</button></div><div class="success-sparkle">✳</div></section>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
